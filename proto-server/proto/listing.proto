@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package listing;
+
+service ListingService {
+  rpc GetListingById(GetListingByIdInput) returns (GetListingByIdResponse);
+}
+
+message GetListingByIdInput {
+  string id = 1;
+}
+
+message GetListingByIdResponse {
+  string id = 1;
+  string address_street = 2;
+  string address_city = 3;
+  string address_state = 4;
+  string address_zip = 5;
+}
